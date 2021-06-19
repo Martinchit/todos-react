@@ -10,6 +10,8 @@ export const useDetectToDosType = (history) => {
       const filterOption = pathnameSplit[2];
       if (validPathnames.find((v) => v === filterOption)) {
         setCurrentFilterOption(filterOption);
+      } else {
+        history.replace('/todos');
       }
     } else {
       setCurrentFilterOption(TO_DO_STATUS.ALL);

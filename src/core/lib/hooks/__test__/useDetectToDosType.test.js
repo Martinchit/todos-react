@@ -10,25 +10,29 @@ describe("useDetectToDosType", () => {
   const mockHistoryAll = {
     location: {
       pathname: '/todos',
-    }
+    },
+    replace: jest.fn()
   }
 
   const mockHistoryCompleted = {
     location: {
       pathname: `/todos/${TO_DO_STATUS.COMPLETED}`,
-    }
+    },
+    replace: jest.fn()
   }
 
   const mockHistoryActive = {
     location: {
       pathname: `/todos/${TO_DO_STATUS.ACTIVE}`,
-    }
+    },
+    replace: jest.fn()
   }
 
   const mockHistoryInvalid = {
     location: {
       pathname: `/todos/something`,
-    }
+    },
+    replace: jest.fn()
   }
 
   beforeEach(() => {
@@ -78,6 +82,7 @@ describe("useDetectToDosType", () => {
       render(<TestComponent history={mockHistoryInvalid} />, container);
     });
     expect(container.textContent).toBe(TO_DO_STATUS.ALL);
+    expect(mockHistoryInvalid.replace).toHaveBeenCalled();
   });
 })
 
