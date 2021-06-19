@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoList styled components renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`ToDoList styled components renders correctly 2`] = `ShallowWrapper {}`;
+
+exports[`ToDoList styled components renders correctly 3`] = `ShallowWrapper {}`;
+
+exports[`ToDoList styled components renders correctly 4`] = `ShallowWrapper {}`;
